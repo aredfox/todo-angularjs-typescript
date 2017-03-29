@@ -51,7 +51,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'AngularJS - Webpack',
+            title: 'ToDoSth',
             template: 'index.html',
             inject: true
         }),

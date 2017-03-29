@@ -5,9 +5,6 @@ export class Root implements angular.IComponentOptions {
     template: string;
 
     constructor() {
-        this.template = `
-        <h1>TODO</h1>
-        <div ui-view></div>
-        `;
+        this.template = require('./root.component.html');
     }
 }
