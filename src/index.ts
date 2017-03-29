@@ -19,9 +19,9 @@ import { moduleName as appModule } from './app/app.module';
  * Bootstrap the application using the imported moduleName
  */
 const bootstrapModuleName = angular.module('application.bootstrap', [
-  appModule
+  appModule, 'ui.bootstrap'
 ]).name;
 
-angular.element(function() {
+angular.element(function () {
   angular.bootstrap(document, [bootstrapModuleName]);
 });

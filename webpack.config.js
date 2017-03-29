@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const ROOT = path.resolve( __dirname, 'src' );
-const DESTINATION = path.resolve( __dirname, 'dist' );
+const ROOT = path.resolve(__dirname, 'src');
+const DESTINATION = path.resolve(__dirname, 'dist');
 
 /**
  * Webpack Plugins
@@ -13,7 +13,7 @@ module.exports = {
     context: ROOT,
 
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.css']
     },
 
     module: {
@@ -27,7 +27,7 @@ module.exports = {
 
             {
                 test: /\.ts$/,
-                exclude: [ /node_modules/ ],
+                exclude: [/node_modules/],
                 use: 'awesome-typescript-loader'
             },
 
@@ -35,6 +35,16 @@ module.exports = {
                 test: /.html$/,
                 exclude: /index.html$/,
                 use: 'html-loader'
+            },
+
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                use: 'url-loader?limit=100000'
             }
         ]
     },
