@@ -1,4 +1,4 @@
-# angularjs-webpack-starter
+# todo-angularjs-typescript
 Example / personal excercise application to program Webpack, AngularJS, TypeScript, Firebase and more...
 
 ## Usage
