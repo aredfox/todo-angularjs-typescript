@@ -1,3 +1,9 @@
 <div ng-repeat="todoItem in $ctrl.todoItems">
     <span>{{ todoItem.title }}</span>
 </div>
+
+<!-- NOTE: running the filter on ng-repeat throws no $digest() errors
+<div ng-repeat="todoItem in $ctrl.todoItems | filter:{completed:true}">
+    <span>{{ todoItem.title }}</span>
+</div>
+-->
