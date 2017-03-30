@@ -19,5 +19,6 @@ class TodosContainerController {
 
     $onInit() {
         this.todoItems = this.todoStorageService.getAll();
+        this.todoStorageService.add(new TodoItem('test', true));
     }
 }
