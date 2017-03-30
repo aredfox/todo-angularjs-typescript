@@ -3,6 +3,7 @@
         <todo-list todo-items="$ctrl.todoItems"></todo-list>
     </uib-tab>
     <uib-tab index="1" heading="Completed">
-        <todo-list todo-items="$ctrl.todoItems" filter-by="{completed:true}"></todo-list>
+        <todo-list todo-items="$ctrl.todoItems | filter:{completed:true}"></todo-list>
+        <!-- returns digest errors, comment the tab with index 1 and the first tab works ok -->
     </uib-tab>
 </uib-tabset>

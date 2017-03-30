@@ -19,10 +19,5 @@ class TodosContainerController {
 
     $onInit() {
         this.todoItems = this.todoStorageService.getAll();
-        /*this.todoStorageService.getAll()
-            .then(todoItems => {
-                console.log(this.todoItems);
-                this.todoItems = todoItems;
-            });*/
     }
 }
