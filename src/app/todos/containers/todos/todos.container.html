@@ -1,2 +1,8 @@
-<h2>All items</h2>
-<todo-list todo-items="$ctrl.todoItems"></todo-list>
+<uib-tabset>
+    <uib-tab index="0" heading="All">
+        <todo-list todo-items="$ctrl.todoItems"></todo-list>
+    </uib-tab>
+    <uib-tab index="1" heading="Completed">
+        <todo-list todo-items="$ctrl.todoItems" filter-by="{completed:true}"></todo-list>
+    </uib-tab>
+</uib-tabset>

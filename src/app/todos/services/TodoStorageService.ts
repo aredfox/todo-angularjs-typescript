@@ -3,8 +3,10 @@ import { TodoItem } from './../models/TodoItem';
 export class TodoStorageService {
 
     todoItems: TodoItem[] = [
-        new TodoItem('Vuilbakken', false),
-        new TodoItem('Afwas', true)
+        new TodoItem('Todo Item 1', false),
+        new TodoItem('Todo Item 2', true),
+        new TodoItem('Todo Item 3', true),
+        new TodoItem('Todo Item 4', false)
     ];
 
     constructor(private $q: angular.IQService) { }
