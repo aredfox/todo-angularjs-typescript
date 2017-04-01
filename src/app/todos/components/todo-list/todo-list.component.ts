@@ -7,8 +7,7 @@ export class TodoList implements angular.IComponentOptions {
     constructor() {
         this.template = require('./todo-list.component.html');
         this.bindings = {
-            todoItems: '<',
-            filterBy: '<'
+            todoItems: '=*' // added =* binding until <* is available, see https://github.com/angular/angular.js/issues/15874
         };
     }
 }
