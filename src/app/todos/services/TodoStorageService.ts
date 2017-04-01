@@ -11,8 +11,8 @@ export class TodoStorageService {
 
     constructor(private $q: angular.IQService) { }
 
-    getAll(): /*angular.IPromise<*/TodoItem[]/*>*/ {
-        return /*this.$q.resolve(*/this.todoItems/*)*/;
+    getAll(): angular.IPromise<TodoItem[]> {
+        return this.$q.resolve(this.todoItems);
     }
 
     add(todoItem: TodoItem) {
