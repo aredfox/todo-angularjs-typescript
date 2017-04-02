@@ -2,7 +2,10 @@
     <uib-tab index="0" heading="All">
         <todo-list todo-items="$ctrl.todoItems"></todo-list>
     </uib-tab>
-    <uib-tab index="1" heading="Completed">
+    <uib-tab index="1" heading="Open">
+        <todo-list todo-items="$ctrl.todoItems | filter:{completed:false}"></todo-list>
+    </uib-tab>
+    <uib-tab index="2" heading="Completed">
         <todo-list todo-items="$ctrl.todoItems | filter:{completed:true}"></todo-list>
     </uib-tab>
 </uib-tabset>

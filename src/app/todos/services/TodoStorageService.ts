@@ -10,7 +10,7 @@ export class TodoStorageService {
         return this.$firebaseArray(ref).$loaded();
     }
 
-    add(todoItem: TodoItem) {
+    add(todoItem: TodoItem): void {
         const ref = firebase.database().ref().child('todos');
         this.$firebaseArray(ref)
             .$add(todoItem)

@@ -1,3 +1,6 @@
-<div ng-repeat="todoItem in $ctrl.todoItems">
-    <span>{{ todoItem.title }}</span>
-</div>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="todoItem in $ctrl.todoItems">
+        <span class="label" ng-class="todoItem.completed ? 'label-success' : 'label-default'"><i class="glyphicon" ng-class="todoItem.completed ? 'glyphicon-ok' : 'glyphicon-remove'"></i></span>
+        <span>{{ todoItem.title }}</span>
+    </li>
+</ul>
