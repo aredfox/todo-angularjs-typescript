@@ -54,7 +54,9 @@
     "angular": "^1.6.1",
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-router": "^0.4.2",
+    "angularfire": "^2.3.0",
     "bootstrap": "^3.3.7",
-    "bootswatch": "^3.3.7"
+    "bootswatch": "^3.3.7",
+    "firebase": "^3.7.4"
   }
 }

@@ -1,3 +1,6 @@
+import 'firebase';
+import 'angularfire';
+
 import 'angular';
 import 'angular-ui-router';
 
