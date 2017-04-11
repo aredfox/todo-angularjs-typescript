@@ -17,16 +17,8 @@ export const moduleName =
     angular.module('application.core', [
         'ui.router'
     ])
-
-    /**
-     * Components
-     */
-    .component('app', new App())
-    .component('root', new Root())
-
-    /**
-     * Configuration
-     */
-    .config(configuration)
-    .config(routing)
-    .name;
+        .component('app', new App())
+        .component('root', new Root())
+        .config(configuration)
+        .config(routing)
+        .name;
