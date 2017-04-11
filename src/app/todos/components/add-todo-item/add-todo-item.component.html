@@ -1,0 +1,10 @@
+<div>
+    <h3>Add todo item:</h3>
+    <form>
+        <div class="form-group">
+            <label for="todoItemTitle">Title</label>
+            <input type="text" class="form-control" id="todoItemTitle" ng-model="$ctrl.todoItem.title" placeholder="Something important...">
+        </div>
+        <button type="submit" ng-click="$ctrl.submit()" class="btn btn-default">Add</button>
+    </form>
+</div>
