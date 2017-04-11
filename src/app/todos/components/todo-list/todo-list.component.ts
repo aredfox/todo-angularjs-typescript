@@ -19,7 +19,10 @@ class TodoListController {
     constructor(private todoStorageService: TodoStorageService) { }
 
     remove(todoItem: any): void {
-        console.log(todoItem);
         this.todoStorageService.remove(todoItem.$id);
+    }
+
+    toggle(todoItem: any): void {
+        this.todoStorageService.toggle(todoItem);
     }
 }
