@@ -3,7 +3,7 @@ import * as firebase from 'firebase';
 
 export class TodoStorageService {
 
-    constructor(private $log: angular.ILogService, private $firebaseArray: any) { }
+    constructor(private $log: angular.ILogService, private $firebaseArray: any, private $firebaseObject: any) { }
 
     getAll(): angular.IPromise<TodoItem[]> {
         const ref = firebase.database().ref().child('todos');
@@ -22,10 +22,10 @@ export class TodoStorageService {
             });
     }
 
-    remove(id: string): void {
-        const ref = firebase.database().ref().child('todos');
-        this.$firebaseArray(ref)
-            .$remove(id)
+    remove(id: any): void {
+        const ref = firebase.database().ref().child('todos').child(id);
+        this.$firebaseObject(ref)
+            .$remove()
             .then(() => this.$log.info(`Removed item with key ${id}.`))
             .catch((error: any) => {
                 this.$log.warn(`Failed to remove item with key ${id}: ${error}.`);
