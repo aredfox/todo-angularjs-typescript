@@ -14,8 +14,7 @@ export class TodoStorageService {
     }
 
     add(todoItem: TodoItem): void {
-        this.todosArr
-            .$add(todoItem)
+        this.todosArr.$add(todoItem)
             .then((ref: any) => {
                 this.$log.info(`Added todo item with key '${ref.key}'.`);
             })
