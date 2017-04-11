@@ -21,14 +21,10 @@ class AddTodoItemController {
 
     submit(): void {
         this.todoStorageService.add(this.todoItem);
-        console.log('Submitting...');
-        console.log(this.todoItem);
         this.reset();
     }
 
     reset(): void {
         this.todoItem = { title: undefined, completed: false };
-        console.log('Resetting...');
-        console.log(this.todoItem);
     }
 }

@@ -22,6 +22,5 @@ class TodosContainerController {
             .then(todoItems => {
                 this.todoItems = todoItems;
             });
-        // this.todoStorageService.add(new TodoItem(`Added in $onInit at ${new Date()}`, true));
     }
 }
