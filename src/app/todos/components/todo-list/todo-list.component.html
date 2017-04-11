@@ -1,7 +1,7 @@
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="todoItem in $ctrl.todoItems">
-        <span class="label" ng-class="todoItem.completed ? 'label-success' : 'label-default'"><i class="glyphicon" ng-class="todoItem.completed ? 'glyphicon-ok' : 'glyphicon-remove'"></i></span>
-        <span>{{ todoItem.title }}</span>
+        <span class="btn btn-xs" ng-class="todoItem.completed ? 'btn-success' : 'btn-default'"><i class="glyphicon" ng-class="todoItem.completed ? 'glyphicon-ok' : 'glyphicon-remove'"></i></span>
+        <span ng-class="todoItem.completed ? 'text-success' : ''">{{ todoItem.title }}</span>
         <span class="pull-right"><a class="btn btn-danger btn-xs" ng-click="$ctrl.remove(todoItem)" role="button"><i class="glyphicon glyphicon-remove"></i> Delete</a></span>
     </li>
 </ul>
